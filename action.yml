@@ -11,5 +11,7 @@ runs:
   steps:
     - name: Decir hola
       run: echo "Hola, ${{ inputs['who-to-greet'] }}!"
+      shell: bash  # Agregando shell
     - name: Mostrar directorio
       run: ls -la
+      shell: bash  # Agregando shell
