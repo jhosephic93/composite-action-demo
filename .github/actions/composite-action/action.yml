@@ -1,0 +1,15 @@
+name: "Simple Composite Action"
+description: "Esta es una acción compuesta simple"
+inputs:
+  who-to-greet:
+    description: "A quién saludar"
+    required: true
+    default: "Mundo"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Decir hola
+      run: echo "Hola, ${{ inputs['who-to-greet'] }}!"
+    - name: Mostrar directorio
+      run: ls -la
